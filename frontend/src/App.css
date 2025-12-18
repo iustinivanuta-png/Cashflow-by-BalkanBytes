@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #0e0e0e;
+}
+
+.page {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.card {
+  width: 100%;
+  box-sizing: border-box;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 12px 0;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;     /* ✅ nu mai împinge layout-ul */
+}
+
+.row > div {
+  min-width: 0;
+  white-space: nowrap;   /* ✅ nu se rupe pe 2 linii */
+  overflow: hidden;
+  text-overflow: ellipsis; /* ✅ ... dacă e prea lung */
+  flex: 1;               /* ✅ fiecare “coloană” stă la fel */
+}
+
+.muted { opacity: 0.7; }
+
+.error {
+  background: #2a0f0f;
+  border: 1px solid #6b1b1b;
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.btn {
+  border: 1px solid #333;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.primary { border-color: #2b6; }
+.danger { border-color: #a33; }
+
+.pos { color: #6f6; }
+.neg { color: #f66; }
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.form input, .form select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #0b0b0b;
+  color: #fff;
+}
+
+.full { grid-column: 1 / -1; }
+
+.list { list-style: none; padding: 0; margin: 0; }
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #222;
+}
+
+.left {
+  min-width: 0;
+  overflow: hidden;
+  flex: 1;               /*  ocupă spațiul, butonul rămâne fix */
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;     /* nu se rupe pe 2 linii */
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #333;
+  opacity: 0.9;
+  flex: 0 0 auto;
+}
+
+.tag.inc { border-color: #2b6; }
+.tag.exp { border-color: #a33; }
