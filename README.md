@@ -96,12 +96,6 @@ http://localhost:5173
 
 ---
 
-## 👥 Colaborare
-
-Proiect realizat pentru lucru în echipă.
-Orice coleg poate rula aplicația local urmând pașii de mai sus.
-
----
 
 ## 📌 Note importante
 
